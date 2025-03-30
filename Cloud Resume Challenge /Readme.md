@@ -7,4 +7,5 @@ For AWS, I explored multiple deployment methods, as listed below:
 3. AWS Amplify.
 
 Azure
+
 For Azure, I explored multiple deployment methods as listed below:
