@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Khatri - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 120px auto 40px;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: #1E3A5F;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #e1e8ed;
+            margin-bottom: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            color: #2c3e50;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            margin: 8px 0;
+            font-size: 1.2rem;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        .header a {
+            color: #1E3A5F;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .header a:hover {
+            color: #1E3A5F;
+            background: rgba(30, 58, 95, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-color: rgba(102, 126, 234, 0.2);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1E3A5F;
+            padding-bottom: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 i {
+            color: #1E3A5F;
+            font-size: 1.6rem;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 20px 0;
+            padding-left: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .section ul li strong {
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .experience-details {
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-details li {
+            margin: 12px 0;
+            font-size: 0.95rem;
+            color: #34495e;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .experience-details li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(30, 58, 95, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(30, 58, 95, 0.1);
+        }
+
+        .skill-item:hover {
+            background: rgba(30, 58, 95, 0.15);
+            transform: translateX(5px);
+            border-color: rgba(30, 58, 95, 0.3);
+        }
+
+        .skill-item i {
+            font-size: 1.5rem;
+            color: #1E3A5F;
+            width: 30px;
+            text-align: center;
+        }
+
+        .certifications a {
+            color: #1E3A5F;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 2px 0;
+        }
+
+        .certifications a:hover {
+            color: #1E3A5F;
+            transform: translateX(5px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e1e8ed;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .signature {
+            margin-top: 1rem;
+            text-align: right;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .signature p {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: #1E3A5F;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .signature p::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #1E3A5F;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 200px 20px 20px;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-details li {
+                padding-left: 20px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                width: 100%;
+                padding: 0.5rem;
+                justify-items: center;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 0.3rem 0.8rem;
+                white-space: nowrap;
+                text-align: center;
+            }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1E3A5F;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(30, 58, 95, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .quick-links {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Watermark Styles */
+        .watermark-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .watermark {
+            position: absolute;
+            opacity: 0.05;
+            transform: rotate(-30deg);
+            transition: all 0.3s ease;
+        }
+
+        .watermark img {
+            width: 200px;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .watermark.linux {
+            top: 10%;
+            left: 10%;
+        }
+
+        .watermark.azure {
+            top: 30%;
+            right: 15%;
+        }
+
+        .watermark.microsoft {
+            bottom: 20%;
+            left: 20%;
+        }
+
+        .watermark.aws {
+            bottom: 30%;
+            right: 25%;
+        }
+
+        /* Ensure content stays above watermarks */
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark-container">
+        <div class="watermark linux">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux Tux">
+        </div>
+        <div class="watermark azure">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure">
+        </div>
+        <div class="watermark microsoft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft">
+        </div>
+        <div class="watermark aws">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./experience.html">Experience</a>
+            <a href="./skills.html">Skills</a>
+            <a href="./certifications.html">Certifications</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./PrashantKhatriCV.html">Cloud CV</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Prashant Khatri</h1>
+            <p><i class="fas fa-briefcase"></i> Senior Technical Support Engineer</p>
+            <p><i class="fas fa-envelope"></i> max29aug@hotmail.com | <i class="fas fa-phone"></i> +91 9929304211</p>
+            <p><i class="fas fa-map-marker-alt"></i> Plot No: 118 Aravalli Vihar, Jamdoli, Agra Road, Jaipur</p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/prashant-khatri-710a731b6">www.linkedin.com/in/prashant-khatri-710a731b6</a></p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-bullseye"></i> Objective</h2>
+            <p>Experienced Support Engineer with 7+ years of expertise in virtual machines, Active Directory, DNS, VMware ESXi, Hyper-V, and Linux systems, currently advancing skills in AWS and Azure to pursue opportunities in Infrastructure as a Service (IaaS).</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-history"></i> Experience</h2>
+            <ul>
+                <li>
+                    <strong>Sr. Technical Support Engineer</strong> - Aloha Technology PVT LTD (Pune, Maharashtra) - Aug 2023 - Present
+                    <ul class="experience-details">
+                        <li>Design, implement and support enterprise-wide Active Directory and supporting systems.</li>
+                        <li>Helped third party client with the troubleshooting for Active Directory Domain Services which includes support AD DS Replication, IP based networking, AD DS Integrated DNS records and zones, Site to subnet mapping, Kerberos Delegation, Windows Time Synchronization (NTP-Network Time Protocol), Group Polices based on LSDOU, Transfer and Seizure of FSMO Roles, Kerberos Authentication, Domain Controller Promotion and Demotion, Active Directory Backup, Domain Controller Defragmentation, Setup User Profiles (Local and Roaming User Profiles), DFSR and FSR including DFSR migration, Account Lockout, whitelisting and port blocking using Windows Server Firewall.</li>
+                        <li>Creating virtual machines using Hyper-V, VMware Player and VMware Fusion. Deploying virtual machines using Hyper-V, Third Party Deploying cloud services, Windows Deployment Services, Microsoft Deployment Kit.</li>
+                        <li>Using WSUS and SCCM for deploying updates and configuring end point devices.</li>
+                        <li>Deployed applications, updates, Operating System -Windows client OS, custom apps and custom scripts with the help of Cloud based SaaS model.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>AD DS Support Engineer</strong> - Resources Valley PVT LTD (Jaipur, Rajasthan) - Feb 2022 - Mar 2023
+                    <ul class="experience-details">
+                        <li>Design, implement and support enterprise-wide Active Directory and supporting systems.</li>
+                        <li>Helped third party client with the troubleshooting for Active Directory Domain Services which includes support AD DS Replication, IP based networking, AD DS Integrated DNS records and zones, Site to subnet mapping, Kerberos Delegation, Windows Time Synchronization (NTP-Network Time Protocol), Group Polices based on LSDOU, Transfer and Seizure of FSMO Roles, Kerberos Authentication, Domain Controller Promotion and Demotion, Active Directory Backup, Domain Controller Defragmentation, Setup User Profiles (Local and Roaming User Profiles), DFSR and FSR including DFSR migration, Account Lockout, whitelisting and port blocking using Windows Server Firewall.</li>
+                        <li>Creating virtual machines using Hyper-V, VMware Player and VMware Fusion.</li>
+                        <li>Implemented Organizational Unit (OU)-based delegation in Active Directory Users and Computers (ADUC) for Self-Service Password Reset (SSPR), user password resets, and account unlocks, enhancing service desk efficiency and security.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Senior Technician, Technical Support</strong> - Dell Technologies (Gurgaon, Haryana) - Aug 2021 - Jan 2022
+                    <ul class="experience-details">
+                        <li>Provided technical assistance and diagnosing faults in the running software on customer's computers, guiding customers with the solution. Closing tickets by proper guidance and feedback.</li>
+                        <li>Helped worldwide customers using Dell Laptops, All-in-ones, printers, desktops and virtual machines. Worked on Alienware laptops including hardware and software troubleshooting, Alienware Command Centre, Dell Digital Delivery, Dell Digital Locker, VMware Fusion and Built-in Self Tests for Dell products.</li>
+                        <li>Windows consumer and commercial troubleshooting including Windows 11 and Windows Server 2022.</li>
+                        <li>Supported clients with Microsoft Office Products, outlook configuration and remote support for gaming laptops and peripherals (including mini-port and port drivers).</li>
+                        <li>Integrating Active Directory Domain Services with Esxi using DNS Records and Kerberos Authentication.</li>
+                        <li>Implemented Organizational Unit (OU)-based delegation in Active Directory Users and Computers (ADUC) for Self-Service Password Reset (SSPR), user password resets, and account unlocks, enhancing service desk efficiency and security.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Technical Support Executive</strong> - Teleperformance (Jaipur, Rajasthan) - Dec 2018 - Mar 2021
+                    <ul class="experience-details">
+                        <li>Provided technical assistance and diagnosing faults in the running software on customers computer, guiding customers with the solution. Closing tickets by proper guidance and feedback.</li>
+                        <li>Helped worldwide customers using Laptops, All-in-ones, printers, desktops and virtual machines, software and hardware support through chat, email and call as an international support executive. Worked on Gpedit, Windows Registry, Windows Updates, Windows Upgrade and Microsoft Office.</li>
+                        <li>Windows consumer and commercial troubleshooting including Windows 10, Windows 7, Windows 8.1, Windows 8 and Windows Server 2016.</li>
+                        <li>Supported clients with Microsoft Office Products, outlook configuration and remote support for gaming laptops and peripherals (including mini-port and port drivers).</li>
+                        <li>Implemented Organizational Unit (OU)-based delegation in Active Directory Users and Computers (ADUC) for Self-Service Password Reset (SSPR), user password resets, and account unlocks, enhancing service desk efficiency and security.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Service Desk Analyst</strong> - Mobizweb PVT LTD (Jaipur, Rajasthan) - Apr 2016 - Oct 2018
+                    <ul class="experience-details">
+                        <li>Helped company employees with the support for Laptops, All-in-ones, printers, desktops and virtual machines, software and hardware support.</li>
+                        <li>Worked on Gpedit, Windows Registry, Windows Updates, Windows Upgrade and Microsoft Office. Windows consumer and commercial troubleshooting including Windows 10, Windows 7, Windows 8.1, Windows 8 and Windows Server 2016.</li>
+                        <li>Supported internal employees with Microsoft Office Products, outlook configuration and remote support for laptops, desktops and peripherals (including mini-port and port drivers).</li>
+                        <li>Implemented Organizational Unit (OU)-based delegation in Active Directory Users and Computers (ADUC) for Self-Service Password Reset (SSPR), user password resets, and account unlocks, enhancing service desk efficiency and security.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <ul>
+                <li><strong>Senior Secondary Education</strong> - Cambridge Court High School (Jaipur, Rajasthan) - Apr 2013 - Jun 2014</li>
+                <li><strong>Secondary Education</strong> - Cambridge Court High School (Jaipur, Rajasthan) - Apr 2011 - Apr 2012</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-tools"></i> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-server"></i>
+                    <span>Active Directory</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-network-wired"></i>
+                    <span>DNS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cloud"></i>
+                    <span>VMware ESXi</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-server"></i>
+                    <span>Hyper-V</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>WSUS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-desktop"></i>
+                    <span>MECM</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS (IaaS)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-microsoft"></i>
+                    <span>Azure (IaaS)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Office 365</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-windows"></i>
+                    <span>Windows Server</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-network-wired"></i>
+                    <span>DHCP</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-tools"></i>
+                    <span>WDS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-toolbox"></i>
+                    <span>Microsoft Deployment Toolkit</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <ul class="certifications">
+                <li><a href="https://courses.yl-ptech.skillsnetwork.site/certificates/52efc49b8c7b47db8947a2a88bf7944f"><i class="fab fa-ibm"></i> Introduction to Cloud by IBM</a></li>
+                <li><a href="https://www.credly.com/badges/ece74605-1210-4766-b67e-6963e1165228/public_url"><i class="fas fa-network-wired"></i> Networking Essentials by CISCO</a></li>
+                <li><a href="https://cdn01.alison-static.net/parchment-previews/e15858ac2bf06647f7d848dd5ce4347c.jpg"><i class="fas fa-certificate"></i> Diploma in Computer Networking</a></li>
+                <li><a href="https://www.udemy.com/certificate/UC-594bc544-ed77-4f0b-8ba9-03d218c50287/"><i class="fab fa-windows"></i> Master MCSE: Windows Server 2022 OS Administration Course (Udemy)</a></li>
+                <li><a href="https://www.credly.com/badges/93a9f7fc-9d30-4297-b927-cb6f0ecabc6c/public_url"><i class="fab fa-linux"></i> LFS101: Introduction to Linux</a></li>
+                <li><a href="https://www.credly.com/badges/3458790b-9827-4e3f-b3a5-f2be8c44b98e/public_url"><i class="fab fa-aws"></i> AWS Knowledge - Cloud Essentials</a></li>
+                <li><a href="https://success.simplilearn.com/259c84b7-d391-406d-8807-a797bf6ead97#acc.H8TNX1Lt"><i class="fas fa-cloud"></i> Simplilearn - Cloud Architect (AWS & Azure)</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-language"></i> Languages</h2>
+            <p>English (Advanced)</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-file-signature"></i> Declaration</h2>
+            <p>I hereby declare that the details and information given above are complete and true to the best of my knowledge.</p>
+            <div class="signature">
+                <p>PRASHANT KHATRI</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><i class="fas fa-code"></i> Designed by Prashant Khatri</p>
+        </div>
+    </div>
+</body>
+</html>
